@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IIT Guwahati EICT Academy | Platform Vision</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        slate: { 850: '#151e2e', 900: '#0f172a', 950: '#020617' },
+                        cyan: { 400: '#22d3ee', 500: '#06b6d4' }
+                    },
+                    backgroundImage: {
+                        'grid-pattern': "linear-gradient(to right, rgba(34, 211, 238, 0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(34, 211, 238, 0.05) 1px, transparent 1px)",
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #020617; }
+        .bg-grid { background-size: 40px 40px; }
+        .glow-text { text-shadow: 0 0 20px rgba(34, 211, 238, 0.5); }
+        .glass-panel {
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #020617; }
+        ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #22d3ee; }
+    </style>
+</head>
+<body class="text-slate-300 font-sans antialiased relative selection:bg-cyan-500/30 selection:text-cyan-100">
+
+    <!-- Global Grid Background -->
+    <div class="fixed inset-0 bg-grid-pattern bg-grid pointer-events-none z-0"></div>
+    <div class="fixed inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-cyan-900/20 via-slate-950/80 to-slate-950 pointer-events-none z-0"></div>
+
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full z-50 glass-panel border-b-white/10">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-gradient-to-br from-cyan-400 to-blue-600 flex items-center justify-center text-white font-bold font-display">IIT</div>
+                <span class="font-display font-semibold text-lg text-white tracking-wide">EICT Academy</span>
+            </div>
+            <div class="hidden md:flex gap-8 text-sm font-medium">
+                <a href="#vision" class="hover:text-cyan-400 transition-colors">The Vision</a>
+                <a href="#modules" class="hover:text-cyan-400 transition-colors">Core Modules</a>
+                <a href="#architecture" class="hover:text-cyan-400 transition-colors">Architecture</a>
+            </div>
+            <button class="bg-cyan-400/10 text-cyan-400 border border-cyan-400/30 px-5 py-2 rounded-full text-sm font-semibold hover:bg-cyan-400 hover:text-slate-950 transition-all duration-300">
+                Live Demo Request
+            </button>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION: The Split Entry Concept -->
+    <section id="vision" class="relative z-10 pt-32 pb-20 min-h-screen flex flex-col justify-center max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16 max-w-3xl mx-auto mt-10">
+            <h1 class="text-5xl md:text-7xl font-display font-bold text-white mb-6 leading-tight">
+                Decoupling Form <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500 glow-text">From Function.</span>
+            </h1>
+            <p class="text-lg md:text-xl text-slate-400 leading-relaxed">
+                Solving the platform's identity crisis by forcing a clean separation of user journeys at the root domain. A seamless bridge between public discovery and academic execution.
+            </p>
+        </div>
+
+        <!-- Split Concept Interactive Mockup -->
+        <div class="grid md:grid-cols-2 gap-6 w-full max-w-5xl mx-auto">
+            <!-- Left Hemisphere -->
+            <div class="group glass-panel rounded-2xl p-10 border-t-2 border-t-transparent hover:border-t-cyan-400 transition-all duration-500 cursor-pointer overflow-hidden relative">
+                <div class="absolute inset-0 bg-gradient-to-br from-cyan-400/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div class="relative z-10 flex flex-col h-full items-center text-center">
+                    <div class="w-20 h-20 rounded-2xl bg-slate-800/50 border border-white/5 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
+                        <i class="fa-solid fa-globe text-3xl text-cyan-400"></i>
+                    </div>
+                    <h2 class="text-3xl font-display font-bold text-white mb-4">The Academy</h2>
+                    <p class="text-slate-400 mb-8 flex-grow">A visually stunning, zero-latency static site for discovery, SEO, and public information. Designed for visitors and prospective students.</p>
+                    <span class="text-cyan-400 font-semibold text-sm tracking-widest uppercase">Explore Frontend &rarr;</span>
+                </div>
+            </div>
+
+            <!-- Right Hemisphere -->
+            <div class="group glass-panel rounded-2xl p-10 border-t-2 border-t-transparent hover:border-t-blue-500 transition-all duration-500 cursor-pointer overflow-hidden relative">
+                <div class="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div class="relative z-10 flex flex-col h-full items-center text-center">
+                    <div class="w-20 h-20 rounded-2xl bg-slate-800/50 border border-white/5 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
+                        <i class="fa-solid fa-graduation-cap text-3xl text-blue-500"></i>
+                    </div>
+                    <h2 class="text-3xl font-display font-bold text-white mb-4">The Portal</h2>
+                    <p class="text-slate-400 mb-8 flex-grow">A secure, authenticated LMS application environment designed for active learning, faculty grading, and administration.</p>
+                    <span class="text-blue-500 font-semibold text-sm tracking-widest uppercase">Enter Secure Zone &rarr;</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MODULES SECTION: The 4 Core Ideas represented as UI Mockups -->
+    <section id="modules" class="relative z-10 py-24 bg-slate-900/50 border-y border-white/5">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="mb-20 md:w-2/3">
+                <h2 class="text-4xl md:text-5xl font-display font-bold text-white mb-6">Four Pillars of the <span class="text-cyan-400">Revamp</span></h2>
+                <p class="text-lg text-slate-400">We are not just redesigning pages; we are engineering tailored application interfaces for every stakeholder in the IITG ecosystem.</p>
+            </div>
+
+            <div class="space-y-32">
+                
+                <!-- 1. Next-Gen LMS -->
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div class="order-2 lg:order-1 glass-panel rounded-xl overflow-hidden border border-slate-700 shadow-2xl">
+                        <!-- Mock LMS UI Built with HTML/CSS -->
+                        <div class="h-8 bg-slate-800 flex items-center px-4 gap-2 border-b border-white/5">
+                            <div class="w-3 h-3 rounded-full bg-red-500/80"></div>
+                            <div class="w-3 h-3 rounded-full bg-yellow-500/80"></div>
+                            <div class="w-3 h-3 rounded-full bg-green-500/80"></div>
+                        </div>
+                        <div class="flex h-72">
+                            <!-- Sidebar -->
+                            <div class="w-1/4 bg-slate-900/80 border-r border-white/5 p-4 flex flex-col gap-4">
+                                <div class="h-6 w-full bg-slate-800 rounded animate-pulse"></div>
+                                <div class="h-4 w-3/4 bg-cyan-400/20 rounded"></div>
+                                <div class="h-4 w-5/6 bg-slate-800 rounded"></div>
+                                <div class="h-4 w-4/6 bg-slate-800 rounded"></div>
+                                <div class="mt-auto h-8 w-full bg-slate-800 rounded-md"></div>
+                            </div>
+                            <!-- Main Content -->
+                            <div class="w-3/4 p-6 bg-slate-950/50 flex flex-col gap-6 relative overflow-hidden">
+                                <div class="flex justify-between items-end">
+                                    <div>
+                                        <div class="text-xs text-cyan-400 font-bold mb-1">ONGOING COURSE</div>
+                                        <div class="h-6 w-48 bg-slate-200 rounded"></div>
+                                    </div>
+                                    <div class="w-12 h-12 rounded-full border-4 border-slate-800 border-t-cyan-400"></div>
+                                </div>
+                                <div class="grid grid-cols-2 gap-4">
+                                    <div class="h-24 bg-slate-800 rounded-lg border border-white/5"></div>
+                                    <div class="h-24 bg-slate-800 rounded-lg border border-white/5"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order-1 lg:order-2">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-400/10 border border-cyan-400/20 text-cyan-400 text-sm font-semibold mb-6">
+                            <i class="fa-solid fa-laptop-code"></i> Student / Faculty
+                        </div>
+                        <h3 class="text-3xl font-display font-bold text-white mb-4">1. The Learning Management System</h3>
+                        <p class="text-slate-400 mb-6">Moving beyond flat-white interfaces, we introduce an engineered, dark-mode learning environment. Deep obsidian backgrounds reduce eye strain, while sticky global navigation ensures users never get lost.</p>
+                        <ul class="space-y-3 text-slate-300">
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-cyan-400"></i> Distraction-free content consumption.</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-cyan-400"></i> Role-based views (Student progress vs. Faculty grading).</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-cyan-400"></i> Neon-cyan active states for clear computational feedback.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 2. CMS Dashboard -->
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-400 text-sm font-semibold mb-6">
+                            <i class="fa-solid fa-database"></i> Administration
+                        </div>
+                        <h3 class="text-3xl font-display font-bold text-white mb-4">2. Headless Content Management</h3>
+                        <p class="text-slate-400 mb-6">Empowering IIT Guwahati staff to manage the platform without developer intervention. A data-dense, scannable backend UI handles complex course structures, news, and faculty directories.</p>
+                        <ul class="space-y-3 text-slate-300">
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-purple-400"></i> Decoupled architecture for unbreakable frontends.</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-purple-400"></i> Visual publishing states (Draft, Review, Live).</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-purple-400"></i> Standardized UI blocks for rapid page generation.</li>
+                        </ul>
+                    </div>
+                    <div class="glass-panel rounded-xl overflow-hidden border border-slate-700 shadow-2xl p-6">
+                        <!-- Mock CMS UI -->
+                        <div class="flex justify-between items-center mb-6">
+                            <div class="h-6 w-32 bg-slate-200 rounded"></div>
+                            <div class="h-8 w-24 bg-purple-500/20 text-purple-400 text-xs flex items-center justify-center rounded font-bold border border-purple-500/30">+ New Entry</div>
+                        </div>
+                        <div class="space-y-3">
+                            <!-- Table Row -->
+                            <div class="flex items-center justify-between p-3 bg-slate-800/50 rounded border border-white/5">
+                                <div class="flex items-center gap-4">
+                                    <div class="w-8 h-8 rounded bg-slate-700"></div>
+                                    <div>
+                                        <div class="h-3 w-40 bg-slate-300 rounded mb-2"></div>
+                                        <div class="h-2 w-24 bg-slate-600 rounded"></div>
+                                    </div>
+                                </div>
+                                <div class="px-2 py-1 bg-green-500/20 text-green-400 text-[10px] uppercase font-bold rounded">Published</div>
+                            </div>
+                            <!-- Table Row -->
+                            <div class="flex items-center justify-between p-3 bg-slate-800/50 rounded border border-white/5">
+                                <div class="flex items-center gap-4">
+                                    <div class="w-8 h-8 rounded bg-slate-700"></div>
+                                    <div>
+                                        <div class="h-3 w-48 bg-slate-300 rounded mb-2"></div>
+                                        <div class="h-2 w-32 bg-slate-600 rounded"></div>
+                                    </div>
+                                </div>
+                                <div class="px-2 py-1 bg-amber-500/20 text-amber-400 text-[10px] uppercase font-bold rounded">Draft</div>
+                            </div>
+                            <!-- Table Row -->
+                            <div class="flex items-center justify-between p-3 bg-slate-800/50 rounded border border-white/5">
+                                <div class="flex items-center gap-4">
+                                    <div class="w-8 h-8 rounded bg-slate-700"></div>
+                                    <div>
+                                        <div class="h-3 w-36 bg-slate-300 rounded mb-2"></div>
+                                        <div class="h-2 w-20 bg-slate-600 rounded"></div>
+                                    </div>
+                                </div>
+                                <div class="px-2 py-1 bg-green-500/20 text-green-400 text-[10px] uppercase font-bold rounded">Published</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Enquiry Kanban -->
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div class="order-2 lg:order-1 glass-panel rounded-xl overflow-hidden border border-slate-700 shadow-2xl p-6 bg-slate-950/80">
+                        <!-- Mock Kanban UI -->
+                        <div class="grid grid-cols-3 gap-4 h-64">
+                            <!-- Column 1 -->
+                            <div class="bg-slate-900/50 rounded-lg p-3 border border-white/5 flex flex-col gap-3">
+                                <div class="text-xs font-bold text-slate-400 border-b border-white/10 pb-2">NEW INQUIRY (2)</div>
+                                <div class="bg-slate-800 p-3 rounded border border-l-4 border-white/5 border-l-cyan-400 shadow-lg">
+                                    <div class="h-3 w-3/4 bg-slate-300 rounded mb-3"></div>
+                                    <div class="flex justify-between items-center">
+                                        <div class="h-2 w-1/2 bg-slate-600 rounded"></div>
+                                        <i class="fa-brands fa-whatsapp text-green-400 text-sm"></i>
+                                    </div>
+                                </div>
+                                <div class="bg-slate-800 p-3 rounded border border-l-4 border-white/5 border-l-cyan-400 shadow-lg">
+                                    <div class="h-3 w-full bg-slate-300 rounded mb-3"></div>
+                                    <div class="flex justify-between items-center">
+                                        <div class="h-2 w-1/3 bg-slate-600 rounded"></div>
+                                        <i class="fa-regular fa-envelope text-blue-400 text-sm"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Column 2 -->
+                            <div class="bg-slate-900/50 rounded-lg p-3 border border-white/5 flex flex-col gap-3">
+                                <div class="text-xs font-bold text-slate-400 border-b border-white/10 pb-2">IN COMMUNICATION</div>
+                                <div class="bg-slate-800 p-3 rounded border border-l-4 border-white/5 border-l-amber-400 shadow-lg opacity-70">
+                                    <div class="h-3 w-5/6 bg-slate-300 rounded mb-3"></div>
+                                    <div class="h-2 w-1/2 bg-slate-600 rounded"></div>
+                                </div>
+                            </div>
+                            <!-- Column 3 -->
+                            <div class="bg-slate-900/50 rounded-lg p-3 border border-white/5 flex flex-col gap-3">
+                                <div class="text-xs font-bold text-slate-400 border-b border-white/10 pb-2">RESOLVED</div>
+                                <div class="bg-slate-800 p-3 rounded border border-l-4 border-white/5 border-l-green-500 shadow-lg opacity-50">
+                                    <div class="h-3 w-2/3 bg-slate-300 rounded mb-3"></div>
+                                    <div class="h-2 w-1/4 bg-slate-600 rounded"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order-1 lg:order-2">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-semibold mb-6">
+                            <i class="fa-solid fa-arrows-turn-to-dots"></i> Operations
+                        </div>
+                        <h3 class="text-3xl font-display font-bold text-white mb-4">3. Active Enquiry Kanban</h3>
+                        <p class="text-slate-400 mb-6">Standard institutional sites dump form submissions into a generic inbox. We propose an active, workable Kanban board to manage prospective enrollments dynamically.</p>
+                        <ul class="space-y-3 text-slate-300">
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-blue-400"></i> Visual columns mapping the applicant journey.</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-blue-400"></i> Omnichannel hooks (WhatsApp & Mail integration).</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-blue-400"></i> Asynchronous Laravel queue processing (Zero lag).</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 4. Registration Stepper -->
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-sm font-semibold mb-6">
+                            <i class="fa-solid fa-user-plus"></i> Onboarding
+                        </div>
+                        <h3 class="text-3xl font-display font-bold text-white mb-4">4. Frictionless Registration</h3>
+                        <p class="text-slate-400 mb-6">Eliminating the drop-off rates associated with long, monolithic government forms. Our segmented UI breaks enrollment into manageable, distraction-free steps.</p>
+                        <ul class="space-y-3 text-slate-300">
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-emerald-400"></i> Time-To-Live (TTL) Session retention.</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-emerald-400"></i> Drop off and return exactly where you left off.</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-emerald-400"></i> Clear, illuminating visual feedback upon validation.</li>
+                        </ul>
+                    </div>
+                    <div class="glass-panel rounded-xl overflow-hidden border border-slate-700 shadow-2xl p-10 flex flex-col items-center justify-center h-80 relative">
+                        <!-- Mock Stepper UI -->
+                        <div class="w-full max-w-md relative">
+                            <!-- Progress Line -->
+                            <div class="absolute top-1/2 left-0 w-full h-1 bg-slate-800 -translate-y-1/2 rounded z-0"></div>
+                            <div class="absolute top-1/2 left-0 w-1/2 h-1 bg-emerald-400 -translate-y-1/2 rounded z-0 shadow-[0_0_10px_rgba(52,211,153,0.8)]"></div>
+                            
+                            <!-- Nodes -->
+                            <div class="flex justify-between relative z-10">
+                                <div class="flex flex-col items-center gap-3">
+                                    <div class="w-10 h-10 rounded-full bg-emerald-400 flex items-center justify-center text-slate-900 font-bold shadow-[0_0_15px_rgba(52,211,153,0.5)]"><i class="fa-solid fa-check"></i></div>
+                                    <span class="text-xs font-bold text-emerald-400">Basic Info</span>
+                                </div>
+                                <div class="flex flex-col items-center gap-3">
+                                    <div class="w-10 h-10 rounded-full bg-slate-900 border-2 border-emerald-400 flex items-center justify-center text-emerald-400 font-bold shadow-[0_0_15px_rgba(52,211,153,0.3)]">2</div>
+                                    <span class="text-xs font-bold text-white">Verification</span>
+                                </div>
+                                <div class="flex flex-col items-center gap-3">
+                                    <div class="w-10 h-10 rounded-full bg-slate-800 border-2 border-slate-600 flex items-center justify-center text-slate-500 font-bold">3</div>
+                                    <span class="text-xs font-bold text-slate-500">Payment</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Mock Form Input -->
+                        <div class="mt-12 w-full max-w-md">
+                            <div class="h-4 w-32 bg-slate-600 rounded mb-2"></div>
+                            <div class="h-12 w-full bg-slate-800/50 border border-slate-600 rounded-lg"></div>
+                            <div class="mt-6 flex justify-end">
+                                <div class="h-10 w-24 bg-emerald-500/20 border border-emerald-500 rounded text-emerald-400 flex items-center justify-center text-sm font-bold">Next</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- TECH STACK SECTION -->
+    <section id="architecture" class="relative z-10 py-24">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h2 class="text-4xl font-display font-bold text-white mb-4">Optimized Architecture</h2>
+            <p class="text-slate-400 mb-16 max-w-2xl mx-auto">Leveraging modern web technologies to ensure scalability, security, and lightning-fast load times.</p>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="glass-panel p-8 rounded-2xl border-t-2 border-t-orange-500 text-left hover:-translate-y-2 transition-transform duration-300">
+                    <i class="fa-brands fa-space-awesome text-4xl text-orange-500 mb-6"></i>
+                    <h3 class="text-2xl font-bold text-white mb-3">Astro.js</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">The frontend engine. Generates zero-JavaScript static HTML for the Academy site, ensuring perfect SEO and instant page loads.</p>
+                </div>
+                <div class="glass-panel p-8 rounded-2xl border-t-2 border-t-indigo-500 text-left hover:-translate-y-2 transition-transform duration-300">
+                    <i class="fa-solid fa-cube text-4xl text-indigo-500 mb-6"></i>
+                    <h3 class="text-2xl font-bold text-white mb-3">Directus CMS</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">The headless content nervous system. Provides a beautiful GUI for staff to manage database schemas and API content visually.</p>
+                </div>
+                <div class="glass-panel p-8 rounded-2xl border-t-2 border-t-red-500 text-left hover:-translate-y-2 transition-transform duration-300">
+                    <i class="fa-brands fa-laravel text-4xl text-red-500 mb-6"></i>
+                    <h3 class="text-2xl font-bold text-white mb-3">Laravel & Postgres</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">The application backend. Handles complex TTL registrations, strict relational academic records, and secure Role-Based Access Controls.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA FOOTER -->
+    <footer class="relative z-10 border-t border-white/10 bg-slate-950 pt-20 pb-10 mt-10">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-4xl md:text-5xl font-display font-bold text-white mb-6">Ready to see it in action?</h2>
+            <p class="text-lg text-slate-400 mb-10">Transition from the conceptual framework directly into the fully functional, coded UI demo.</p>
+            <div class="flex justify-center gap-6">
+                <button class="bg-cyan-400 text-slate-950 px-8 py-4 rounded-full font-bold text-lg hover:bg-cyan-300 hover:shadow-[0_0_20px_rgba(34,211,238,0.4)] transition-all duration-300 flex items-center gap-3">
+                    <i class="fa-solid fa-play"></i> Launch Demo
+                </button>
+            </div>
+            <p class="text-slate-600 text-sm mt-16">&copy; 2024 N8E Labs. Proposal for IIT Guwahati EICT Academy.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
